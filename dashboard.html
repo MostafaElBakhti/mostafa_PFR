@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - TaskHelper</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html"><h2><i class="fas fa-tasks"></i> TaskHelper</h2></a>
+            </div>
+            <div class="nav-menu">
+                <a href="browse-tasks.html" class="nav-link">Browse Tasks</a>
+                <a href="post-task.html" class="nav-link">Post Task</a>
+                <a href="dashboard.html" class="nav-link active">Dashboard</a>
+                <a href="profile.html" class="nav-link">Profile</a>
+                <a href="php/logout.php" class="nav-link">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <div class="dashboard-sidebar">
+            <div class="sidebar-menu">
+                <a href="#" class="menu-item active" data-section="overview">
+                    <i class="fas fa-chart-line"></i> Overview
+                </a>
+                <a href="#" class="menu-item" data-section="my-tasks">
+                    <i class="fas fa-tasks"></i> My Posted Tasks
+                </a>
+                <a href="#" class="menu-item" data-section="applications">
+                    <i class="fas fa-file-alt"></i> My Applications
+                </a>
+                <a href="#" class="menu-item" data-section="active-work">
+                    <i class="fas fa-briefcase"></i> Active Work
+                </a>
+                <a href="#" class="menu-item" data-section="completed">
+                    <i class="fas fa-check-circle"></i> Completed Tasks
+                </a>
+            </div>
+        </div>
+
+        <div class="dashboard-content">
+            <div id="overview" class="dashboard-section active">
+                <div class="dashboard-header">
+                    <h1>Dashboard Overview</h1>
+                    <a href="post-task.html" class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Post New Task
+                    </a>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="totalTasks">0</h3>
+                            <p>Total Tasks Posted</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="totalApplications">0</h3>
+                            <p>Applications Sent</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="activeWork">0</h3>
+                            <p>Active Work</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="rating">0.0</h3>
+                            <p>Average Rating</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-activity">
+                    <h2>Recent Activity</h2>
+                    <div id="recentActivity" class="activity-list">
+                        <!-- Activity items will be loaded here -->
+                    </div>
+                </div>
+            </div>
+
+            <div id="my-tasks" class="dashboard-section">
+                <div class="dashboard-header">
+                    <h1>My Posted Tasks</h1>
+                    <a href="post-task.html" class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Post New Task
+                    </a>
+                </div>
+                <div id="myTasksList" class="tasks-list">
+                    <!-- Tasks will be loaded here -->
+                </div>
+            </div>
+
+            <div id="applications" class="dashboard-section">
+                <div class="dashboard-header">
+                    <h1>My Applications</h1>
+                </div>
+                <div id="myApplicationsList" class="applications-list">
+                    <!-- Applications will be loaded here -->
+                </div>
+            </div>
+
+            <div id="active-work" class="dashboard-section">
+                <div class="dashboard-header">
+                    <h1>Active Work</h1>
+                </div>
+                <div id="activeWorkList" class="work-list">
+                    <!-- Active work will be loaded here -->
+                </div>
+            </div>
+
+            <div id="completed" class="dashboard-section">
+                <div class="dashboard-header">
+                    <h1>Completed Tasks</h1>
+                </div>
+                <div id="completedTasksList" class="completed-list">
+                    <!-- Completed tasks will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
